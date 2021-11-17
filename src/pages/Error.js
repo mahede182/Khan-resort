@@ -1,10 +1,8 @@
 import React from 'react'
-
+import Hero from '../component/Hero'
 const Error = () => {
     return (
-        <div>
-            this is error
-        </div>
+        <Hero />
     )
 }
 export default Error
