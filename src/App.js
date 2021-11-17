@@ -8,11 +8,12 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Navbar from './component/Navbar';
 
 function App() {
   return (
   <>
-        {/* <Error /> */}
+        <Navbar></Navbar>
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='rooms' element={<Rooms/>} />
