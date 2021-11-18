@@ -2,8 +2,10 @@ import React from 'react'
 import Hero from '../component/Hero'
 import Banner from '../component/Bannner'
 import { Link } from 'react-router-dom'
+import Services from '../component/Services'
 const Home = () => {
     return (
+        <>
         <Hero>
             <Banner
              title="luxurios rooms"
@@ -13,6 +15,8 @@ const Home = () => {
                  </Link>
             </Banner>
         </Hero>
+        <Services />
+        </>
     )
 }
 export default Home
