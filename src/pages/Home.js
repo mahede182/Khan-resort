@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import Services from '../component/Services'
 import FeaturedRooms from '../component/FeaturedRooms'
 
+
 const Home = () => {
     return (
         <>
@@ -19,6 +20,7 @@ const Home = () => {
         </Hero>
         <Services />
         <FeaturedRooms />
+        
         </>
     )
 }
