@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import defaultImg from '../assets/images/room-1.jpeg'
+import defaultImg from '../assets/images/room-1.jpg'
 import PropTypes from 'prop-types'
 import {memo} from 'react'
 
