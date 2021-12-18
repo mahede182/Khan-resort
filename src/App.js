@@ -5,12 +5,12 @@ import Error from './pages/Error'
 import './App.css';
 import {
   Route,
-  Switch,
-  Link
+  Switch
 } from "react-router-dom";
 import Navbar from './component/Navbar';
 
 function App() {
+  // here used react-router-dom -v5.3.0
   return (
   <>
         <Navbar></Navbar>

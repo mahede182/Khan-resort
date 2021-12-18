@@ -1,6 +1,5 @@
 import {Component} from 'react'
 import defaultBcg from '../assets/images/room-1.jpg'
-import Hero from '../component/Hero'
 import Banner from '../component/Bannner'
 import {Link} from 'react-router-dom'
 import { RoomContext } from '../context'
@@ -8,7 +7,6 @@ import StyledHero from '../component/StyledHero'
 export default class SingleRoom extends Component {
     constructor(props){
         super(props)
-        console.log(props)
         this.state = {
             slug: this.props.match.params.slug,
             defaultBcg: defaultBcg,

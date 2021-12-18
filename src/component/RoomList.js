@@ -10,7 +10,7 @@ function RoomList({rooms}) {
         )
     }
     return(
-        <section className = "roomslist">
+        <section className ="roomslist">
             <div className="roomslist-center">
                 {
                     rooms.map(item => {

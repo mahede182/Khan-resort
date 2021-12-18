@@ -7,6 +7,7 @@ const RoomContext = React.createContext();
 class RoomProvider extends Component {
     state={
         rooms:[],
+        //sorted ascending order
         sortedRooms:[],
         featuredRooms:[],
         loading: true,
@@ -22,7 +23,6 @@ class RoomProvider extends Component {
     };
 
     //get data
-
     componentDidMount(){
         let rooms = this.formatData(items)
         let featuredRooms = rooms.filter(room => room.featured===true)
@@ -39,6 +39,7 @@ class RoomProvider extends Component {
             maxSize,
         })
     }
+    // formatting the data
     formatData(){
         let tempItems = items.map(item=>{
             let id = item.sys.id
@@ -61,22 +62,26 @@ class RoomProvider extends Component {
           const value = event.type === "checkbox" ? target.checked : target.value
           const name = event.target.name
           this.setState({
-              [name]:value
+            [name]:value
           },this.filterRooms)
-
-          console.log(`name= ${name} value = ${value}`)
       }
 
       filterRooms = () =>{
           let{
-              rooms, type,capacity, price, minSize, maxSize,breakfast,
+              rooms, 
+              type,
+              capacity, 
+              price, 
+              minSize, 
+              maxSize,
+              breakfast,
               pets
           }=this.state
         //   this is for rooms
-          let tempRooms = [...rooms];
+        let tempRooms = [...rooms];
 
         //   transformed the values as number=> capacity
-         capacity = parseInt(capacity)
+        capacity = parseInt(capacity)
 
         //  price transformation
         price = parseInt(price)
@@ -119,7 +124,7 @@ class RoomProvider extends Component {
 }
 
 const RoomConsumer = RoomContext.Consumer;
-
+// hight order component(HOC pattern used here)
 export function withRoomConsumer(Component){
     return function ConsumerWrapper(props){
         return <RoomConsumer>
